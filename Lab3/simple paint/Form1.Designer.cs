@@ -37,30 +37,33 @@
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolsPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBrush = new System.Windows.Forms.GroupBox();
             this.Other = new System.Windows.Forms.Button();
             this.krug = new System.Windows.Forms.Button();
+            this.octoflower = new System.Windows.Forms.Button();
             this.pryamo = new System.Windows.Forms.Button();
+            this.Crocodile = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.kvadr = new System.Windows.Forms.Button();
-            this.octoflower = new System.Windows.Forms.Button();
-            this.Crocodile = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.blueBox = new System.Windows.Forms.TextBox();
-            this.greenBox = new System.Windows.Forms.TextBox();
-            this.redBox = new System.Windows.Forms.TextBox();
-            this.sC = new System.Windows.Forms.Panel();
             this.drawPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolsPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBrush.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.drawPanel.SuspendLayout();
@@ -76,7 +79,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1183, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -140,58 +143,148 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox2.Image = global::simple_paint.Properties.Resources.rgbSpectrum;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 153);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(179, 454);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
-            // 
             // toolsPanel
             // 
+            this.toolsPanel.Controls.Add(this.panel2);
             this.toolsPanel.Controls.Add(this.groupBrush);
-            this.toolsPanel.Controls.Add(this.octoflower);
-            this.toolsPanel.Controls.Add(this.Crocodile);
-            this.toolsPanel.Controls.Add(this.label5);
-            this.toolsPanel.Controls.Add(this.label4);
-            this.toolsPanel.Controls.Add(this.label3);
-            this.toolsPanel.Controls.Add(this.label1);
-            this.toolsPanel.Controls.Add(this.blueBox);
-            this.toolsPanel.Controls.Add(this.greenBox);
-            this.toolsPanel.Controls.Add(this.redBox);
-            this.toolsPanel.Controls.Add(this.sC);
-            this.toolsPanel.Controls.Add(this.pictureBox2);
             this.toolsPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.toolsPanel.Location = new System.Drawing.Point(1004, 0);
+            this.toolsPanel.Location = new System.Drawing.Point(1084, 0);
             this.toolsPanel.Name = "toolsPanel";
-            this.toolsPanel.Size = new System.Drawing.Size(179, 607);
+            this.toolsPanel.Size = new System.Drawing.Size(180, 583);
             this.toolsPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 285);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(180, 147);
+            this.panel2.TabIndex = 9;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button9.Location = new System.Drawing.Point(0, 107);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(180, 40);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Градиент";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(136, 52);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(40, 40);
+            this.button8.TabIndex = 7;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Blue;
+            this.button7.Location = new System.Drawing.Point(93, 52);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(40, 40);
+            this.button7.TabIndex = 6;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Cyan;
+            this.button6.Location = new System.Drawing.Point(49, 52);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(40, 40);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button5.Location = new System.Drawing.Point(3, 52);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(40, 40);
+            this.button5.TabIndex = 4;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Yellow;
+            this.button4.Location = new System.Drawing.Point(136, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 40);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(93, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 40);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(47, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 40);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBrush
             // 
             this.groupBrush.Controls.Add(this.Other);
             this.groupBrush.Controls.Add(this.krug);
+            this.groupBrush.Controls.Add(this.octoflower);
             this.groupBrush.Controls.Add(this.pryamo);
+            this.groupBrush.Controls.Add(this.Crocodile);
             this.groupBrush.Controls.Add(this.trackBar1);
             this.groupBrush.Controls.Add(this.kvadr);
+            this.groupBrush.Controls.Add(this.label1);
             this.groupBrush.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBrush.Location = new System.Drawing.Point(0, 0);
             this.groupBrush.Name = "groupBrush";
-            this.groupBrush.Size = new System.Drawing.Size(179, 147);
+            this.groupBrush.Size = new System.Drawing.Size(180, 285);
             this.groupBrush.TabIndex = 0;
             this.groupBrush.TabStop = false;
             // 
             // Other
             // 
+            this.Other.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Other.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Other.Location = new System.Drawing.Point(74, 107);
+            this.Other.Location = new System.Drawing.Point(3, 96);
             this.Other.Name = "Other";
-            this.Other.Size = new System.Drawing.Size(65, 31);
+            this.Other.Size = new System.Drawing.Size(174, 31);
             this.Other.TabIndex = 1;
             this.Other.Text = "Спрей";
             this.Other.UseVisualStyleBackColor = true;
@@ -199,151 +292,97 @@
             // 
             // krug
             // 
+            this.krug.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.krug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.krug.Location = new System.Drawing.Point(6, 107);
+            this.krug.Location = new System.Drawing.Point(3, 127);
             this.krug.Name = "krug";
-            this.krug.Size = new System.Drawing.Size(65, 31);
+            this.krug.Size = new System.Drawing.Size(174, 31);
             this.krug.TabIndex = 1;
             this.krug.Text = "Круг";
             this.krug.UseVisualStyleBackColor = true;
             this.krug.Click += new System.EventHandler(this.krug_Click);
             // 
-            // pryamo
-            // 
-            this.pryamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pryamo.Location = new System.Drawing.Point(74, 70);
-            this.pryamo.Name = "pryamo";
-            this.pryamo.Size = new System.Drawing.Size(65, 31);
-            this.pryamo.TabIndex = 1;
-            this.pryamo.Text = "Ластик";
-            this.pryamo.UseVisualStyleBackColor = true;
-            this.pryamo.Click += new System.EventHandler(this.pryamo_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.AutoSize = false;
-            this.trackBar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.trackBar1.Location = new System.Drawing.Point(3, 19);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(173, 45);
-            this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 45;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // kvadr
-            // 
-            this.kvadr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kvadr.Location = new System.Drawing.Point(6, 70);
-            this.kvadr.Name = "kvadr";
-            this.kvadr.Size = new System.Drawing.Size(65, 31);
-            this.kvadr.TabIndex = 0;
-            this.kvadr.Text = "Квадрат";
-            this.kvadr.UseVisualStyleBackColor = true;
-            this.kvadr.Click += new System.EventHandler(this.kvadr_Click);
-            // 
             // octoflower
             // 
+            this.octoflower.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.octoflower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.octoflower.Location = new System.Drawing.Point(84, 448);
+            this.octoflower.Location = new System.Drawing.Point(3, 158);
             this.octoflower.Name = "octoflower";
-            this.octoflower.Size = new System.Drawing.Size(65, 31);
+            this.octoflower.Size = new System.Drawing.Size(174, 31);
             this.octoflower.TabIndex = 8;
             this.octoflower.Text = "Листик";
             this.octoflower.UseVisualStyleBackColor = true;
             this.octoflower.Click += new System.EventHandler(this.octoflower_Click_1);
             // 
+            // pryamo
+            // 
+            this.pryamo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pryamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pryamo.Location = new System.Drawing.Point(3, 189);
+            this.pryamo.Name = "pryamo";
+            this.pryamo.Size = new System.Drawing.Size(174, 31);
+            this.pryamo.TabIndex = 1;
+            this.pryamo.Text = "Ластик";
+            this.pryamo.UseVisualStyleBackColor = true;
+            this.pryamo.Click += new System.EventHandler(this.pryamo_Click);
+            // 
             // Crocodile
             // 
+            this.Crocodile.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Crocodile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Crocodile.Location = new System.Drawing.Point(6, 448);
+            this.Crocodile.Location = new System.Drawing.Point(3, 220);
             this.Crocodile.Name = "Crocodile";
-            this.Crocodile.Size = new System.Drawing.Size(65, 31);
+            this.Crocodile.Size = new System.Drawing.Size(174, 31);
             this.Crocodile.TabIndex = 2;
-            this.Crocodile.Text = "Прямая";
+            this.Crocodile.Text = "Линия";
             this.Crocodile.UseVisualStyleBackColor = true;
-            this.Crocodile.Click += new System.EventHandler(this.octoFlower_Click);
             // 
-            // label5
+            // trackBar1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 418);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 15);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Currect Color";
+            this.trackBar1.AutoSize = false;
+            this.trackBar1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.trackBar1.Location = new System.Drawing.Point(3, 43);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Minimum = 1;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(174, 45);
+            this.trackBar1.TabIndex = 0;
+            this.trackBar1.Value = 45;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
-            // label4
+            // kvadr
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 387);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Blue";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 358);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Green";
+            this.kvadr.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kvadr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kvadr.Location = new System.Drawing.Point(3, 251);
+            this.kvadr.Name = "kvadr";
+            this.kvadr.Size = new System.Drawing.Size(174, 31);
+            this.kvadr.TabIndex = 0;
+            this.kvadr.Text = "Квадрат";
+            this.kvadr.UseVisualStyleBackColor = true;
+            this.kvadr.Click += new System.EventHandler(this.kvadr_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 319);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(3, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Red";
-            // 
-            // blueBox
-            // 
-            this.blueBox.Location = new System.Drawing.Point(68, 379);
-            this.blueBox.Name = "blueBox";
-            this.blueBox.ReadOnly = true;
-            this.blueBox.Size = new System.Drawing.Size(100, 23);
-            this.blueBox.TabIndex = 5;
-            this.blueBox.TextChanged += new System.EventHandler(this.blueBox_TextChanged);
-            // 
-            // greenBox
-            // 
-            this.greenBox.Location = new System.Drawing.Point(68, 350);
-            this.greenBox.Name = "greenBox";
-            this.greenBox.ReadOnly = true;
-            this.greenBox.Size = new System.Drawing.Size(100, 23);
-            this.greenBox.TabIndex = 4;
-            this.greenBox.TextChanged += new System.EventHandler(this.greenBox_TextChanged);
-            // 
-            // redBox
-            // 
-            this.redBox.Location = new System.Drawing.Point(68, 316);
-            this.redBox.Name = "redBox";
-            this.redBox.ReadOnly = true;
-            this.redBox.Size = new System.Drawing.Size(100, 23);
-            this.redBox.TabIndex = 0;
-            this.redBox.TextChanged += new System.EventHandler(this.redBox_TextChanged);
-            // 
-            // sC
-            // 
-            this.sC.Location = new System.Drawing.Point(84, 408);
-            this.sC.Name = "sC";
-            this.sC.Size = new System.Drawing.Size(84, 25);
-            this.sC.TabIndex = 2;
+            this.label1.Size = new System.Drawing.Size(175, 24);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Выбор толщины:";
             // 
             // drawPanel
             // 
             this.drawPanel.AutoScroll = true;
-            this.drawPanel.Controls.Add(this.toolsPanel);
             this.drawPanel.Controls.Add(this.pictureBox1);
+            this.drawPanel.Controls.Add(this.toolsPanel);
             this.drawPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drawPanel.Location = new System.Drawing.Point(0, 0);
             this.drawPanel.Name = "drawPanel";
-            this.drawPanel.Size = new System.Drawing.Size(1183, 607);
+            this.drawPanel.Size = new System.Drawing.Size(1264, 583);
             this.drawPanel.TabIndex = 2;
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
             this.drawPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -354,7 +393,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1183, 607);
+            this.pictureBox1.Size = new System.Drawing.Size(1084, 583);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -367,27 +406,27 @@
             // 
             this.panel1.Controls.Add(this.drawPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1183, 607);
+            this.panel1.Size = new System.Drawing.Size(1264, 583);
             this.panel1.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 607);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1264, 607);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolsPanel.ResumeLayout(false);
-            this.toolsPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBrush.ResumeLayout(false);
+            this.groupBrush.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.drawPanel.ResumeLayout(false);
             this.drawPanel.PerformLayout();
@@ -409,7 +448,6 @@
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
         private ToolStripMenuItem создатьToolStripMenuItem;
         private ToolStripMenuItem правкаToolStripMenuItem;
-        private PictureBox pictureBox2;
         private Panel toolsPanel;
         private GroupBox groupBrush;
         private Button Other;
@@ -419,16 +457,20 @@
         private Button kvadr;
         private Button octoflower;
         private Button Crocodile;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label1;
-        private TextBox blueBox;
-        private TextBox greenBox;
-        private TextBox redBox;
-        private Panel sC;
         private Panel drawPanel;
         private PictureBox pictureBox1;
         private Panel panel1;
+        private ColorDialog colorDialog1;
+        private Panel panel2;
+        private Button button9;
+        private Button button8;
+        private Button button7;
+        private Button button6;
+        private Button button5;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Label label1;
     }
 }

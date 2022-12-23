@@ -16,14 +16,11 @@ namespace simple_paint
 
         Color SelectedColor
         {
-            get { return Color.Red; } // возвращает знаечение панели со цветом
+            get { return Color.Black; }
         }
-        
 
-        int SelectedSize
-        {
-            get { return trackBar1.Value; }
-        }
+
+        int SelectedSize;
         
         Brush _selectedBrush ;
 
@@ -37,7 +34,7 @@ namespace simple_paint
             InitializeComponent();
             CreateBlank(pictureBox1.Width, pictureBox1.Height);
             Brush.GetSize(pictureBox1.Width, pictureBox1.Height);
-            if (_selectedBrush == null) //программа жаловалась на Null в кисти и я сделал так чтобы она перестала это
+            if (_selectedBrush == null)
             {
                 _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
             }
@@ -71,27 +68,7 @@ namespace simple_paint
             }
 
         }
-        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;                   // выбирает пиксель из палитры градиента
-            if (_mouseClicked)
-            {
-                Color SelectedColor = pixelData.GetPixel(e.X, e.Y);
-            }
-
-        }
-
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            sC.BackColor = Color.Red;
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;               // устанавливает цвет панели
-            Color SelectedColor = pixelData.GetPixel(e.X, e.Y);
-            redBox.Text = SelectedColor.R.ToString();
-            greenBox.Text = SelectedColor.G.ToString();
-            blueBox.Text = SelectedColor.B.ToString();
-            sC.BackColor = SelectedColor;
-
-        }
+        
         private void kvadr_Click(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
@@ -101,7 +78,7 @@ namespace simple_paint
         {
             if(_selectedBrush == null)
             {
-                //brush тип не выбрана кисть
+
                 return;
             }
             _x = e.X > 0 ? e.X : 0;
@@ -203,15 +180,14 @@ namespace simple_paint
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog(); //диалоговое окно новое
-            if (dialog.ShowDialog() == DialogResult.OK)   //цикл
+            SaveFileDialog dialog = new SaveFileDialog();
             {
                 int width = Convert.ToInt32(pictureBox1.Width);
                 int height = Convert.ToInt32(pictureBox1.Height);
                 using (Bitmap bmp = new Bitmap(width, height))
                 {
                     pictureBox1.DrawToBitmap(bmp, new Rectangle(0, 0, width, height));
-                    bmp.Save(dialog.FileName, ImageFormat.Jpeg);    //save
+                    bmp.Save(dialog.FileName, ImageFormat.Jpeg);
                 }
             }
         }
@@ -223,30 +199,28 @@ namespace simple_paint
                 pictureBox1.Image = Image.FromFile(ofd.FileName);
         }
 
-        private void octoFlower_Click(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            _selectedBrush.cColor = Color.Red;
-            _selectedBrush.Size = 6;
-            
-            _selectedBrush.Draw(pictureBox1.Image as Bitmap, 20, 20);
-            
-            _selectedBrush.Draw(pictureBox1.Image as Bitmap, 100, 400); 
-            _selectedBrush.Draw(pictureBox1.Image as Bitmap, 300, 450); 
-            pictureBox1.Refresh();
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 20, 20, 100, 400, Color.Red);
-             
-
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 300, 450, 100, 400, Color.Red);
-
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 300, 450, 350, 400 , Color.Red);
-
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 350, 400, 300, 140, Color.Red);
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 300, 140, 100 , 140, Color.Red);
-            LineDrawer.DrawLine(pictureBox1.Image as Bitmap, 100, 140, 20, 20, Color.Red);
-            pictureBox1.Refresh();
-
-            //pictureBox1.CreateGraphics().DrawLine(new Pen(Color.Red), 20, 20, 100, 400);
+            _selectedBrush.cColor = ((Button)sender).BackColor;
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if(colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                _selectedBrush.cColor = colorDialog1.Color;
+                ((Button)sender).BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            _selectedBrush.Size = trackBar1.Value;
+        }
+
+
 
         private void octoflower_Click_1(object sender, EventArgs e)
         {

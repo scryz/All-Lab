@@ -37,7 +37,10 @@ namespace simple_paint
             {
                 for (int x0 = x - Size; x0 < x + Size; ++x0)
                 {
-                    image.SetPixel(x0, y0, cColor);
+                    if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+                    {
+                        image.SetPixel(x0, y0, cColor);
+                    }
                 }
             }
 
@@ -65,7 +68,10 @@ namespace simple_paint
                     {
                         try
                         {
-                            image.SetPixel(x0, y0, cColor);
+                            if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+                            {
+                                image.SetPixel(x0, y0, cColor);
+                            }
                         }
                         catch (Exception)
                         {
@@ -83,14 +89,17 @@ namespace simple_paint
     }
     internal class Eraser : Brush
     {
-        public Eraser(Color cColor, int size) : base(cColor, size) { }
+        public Eraser(Color color, int size) : base(Color.White, size) { }
         public override void Draw(Bitmap image, int x, int y)
         {
             for (int y0 = y - Size; y0 < y + Size; ++y0)
             {
                 for (int x0 = x - Size; x0 < x + Size; ++x0)
                 {
-                    image.SetPixel(x0, y0, Color.White);
+                    if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+                    {
+                        image.SetPixel(x0, y0, cColor);
+                    }
                 }
             }
         }
@@ -149,7 +158,11 @@ namespace simple_paint
             {
                 for (int x0 = x - Size; x0 < x + Size; ++x0)
                 {
-                    image.SetPixel(x0, y - x + x0, cColor);
+                    if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+                    {
+                        image.SetPixel(x0, y - x + x0, cColor);
+                    }
+
                 }
             }
 
