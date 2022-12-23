@@ -8,8 +8,7 @@ namespace LAB72
     {
         static void Main(string[] args)
         {
-            //ax^2+bx+с
-            //D=b^2-4ac
+
             double a, b, c;
             Console.WriteLine("Введите a: ");
             a = Convert.ToDouble(Console.ReadLine());

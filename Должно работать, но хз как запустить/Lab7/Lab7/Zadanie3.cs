@@ -8,7 +8,7 @@ namespace LAB7
     {
         public bool z3(int year)
         {
-            if (year < 0 || year == 0)
+            if (year <= 0)
                 throw new ArgumentException();
             else
             {
