@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spere\\Desktop\\GitHub\\lab2\\Первое\\Первое\\Первое.csproj": {}
+    "C:\\Users\\spere\\Desktop\\GitHub\\все лабы, которые успел сделать\\Lab2\\Первое\\Первое.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spere\\Desktop\\GitHub\\lab2\\Первое\\Первое\\Первое.csproj": {
+    "C:\\Users\\spere\\Desktop\\GitHub\\все лабы, которые успел сделать\\Lab2\\Первое\\Первое.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spere\\Desktop\\GitHub\\lab2\\Первое\\Первое\\Первое.csproj",
+        "projectUniqueName": "C:\\Users\\spere\\Desktop\\GitHub\\все лабы, которые успел сделать\\Lab2\\Первое\\Первое.csproj",
         "projectName": "Первое",
-        "projectPath": "C:\\Users\\spere\\Desktop\\GitHub\\lab2\\Первое\\Первое\\Первое.csproj",
+        "projectPath": "C:\\Users\\spere\\Desktop\\GitHub\\все лабы, которые успел сделать\\Lab2\\Первое\\Первое.csproj",
         "packagesPath": "C:\\Users\\spere\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spere\\Desktop\\GitHub\\lab2\\Первое\\Первое\\obj\\",
+        "outputPath": "C:\\Users\\spere\\Desktop\\GitHub\\все лабы, которые успел сделать\\Lab2\\Первое\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

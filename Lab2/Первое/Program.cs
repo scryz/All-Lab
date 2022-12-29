@@ -66,14 +66,14 @@ namespace laba2
 
         enum Education
         {
-            Specialist, Bachelor, SecondEducation
+            Специалитет, Бакалавриат , ВтороеОбразование
         }
 
         class Exam
         {
             public string Discipline;
             public int Rate;
-            public System.DateTime DateOfExam;
+            public DateTime DateOfExam;
         
             public Exam(string discipline, int rate, DateTime DateOfExam)
             {
@@ -82,12 +82,12 @@ namespace laba2
                 this.DateOfExam = DateOfExam;
             }
 
-          //  public Exam()
-          //  {
-          //      Discipline = "Программирование";
-          //      Rate = 5;
-          //      DateOfExam = new DateTime(2022, 10, 23);
-          //  }
+            public Exam()
+            {
+                Discipline = "Программирование";
+                Rate = 5;
+                DateOfExam = new DateTime(2022, 10, 23);
+            }
                 public string ToFullString()
             {
                 return "Дисциплина: " + Discipline + ", оценка: " + Rate + ", дата экзамена: " + DateOfExam;
@@ -112,7 +112,7 @@ namespace laba2
             public Student()
             {
                 this.person = new Person();
-                this.education = Education.Bachelor;
+                this.education = Education.Бакалавриат;
                 this.group = 11;
                 this._passedExams = new Exam[0];
 
@@ -135,7 +135,27 @@ namespace laba2
                 set { group = value; }
             }
 
-            public double AvarageRate => _passedExams.Average(ex => ex.Rate);
+            public double AvgRate
+            {
+
+                get
+                {
+                    double sum = 0;
+                    int i;
+                    for (i = 0; i < _passedExams.Length; i++)
+                    {
+                        sum = sum + _passedExams[i].Rate;
+
+                    }
+                    if (_passedExams.Length != 0)
+                    {
+                        return sum / _passedExams.Length;
+                    }
+                    else
+                        return 0;
+                }
+            }
+                
 
 
             public void AddExams(params Exam[] exams)
@@ -149,21 +169,21 @@ namespace laba2
             {
                 string examens = "";
                 foreach (var item in _passedExams)
-                    examens += item.Discipline + item.Rate;
-                return "Имя: " + person.Name + "Фамилия: " + person.SecondName + "Дата рождения: " + person.dateOfBirth + ", форма обучения: " + education + ", группа: " + group + ", результаты экзаменов: " + examens;
+                    examens += item.Discipline + item.Rate + ";\n";
+                return "Имя: " + person.Name + ", Фамилия: " + person.SecondName + ", Дата рождения: " + person.dateOfBirth + ", форма обучения: " + education + ", группа: " + group + ", результаты экзаменов: " + "\n" + examens;
             }
 
             public string ToShortString()
             {
-                return "Имя: " + person.Name + "Фамилия: " + person.SecondName + "Дата рождения: " + person.dateOfBirth + ",  форма обучения: " + education + ", группа: " + group + ", средний балл: " + AvarageRate;
+                return "Имя: " + person.Name + ", Фамилия: " + person.SecondName + ", Дата рождения: " + person.dateOfBirth + ",  форма обучения: " + education + ", группа: " + group + ", средний балл: " + AvgRate;
             }
         }
 
         static void Main()
         {
             Person p1 = new Person();
-            p1.Name = "John ";
-            p1.SecondName = "Smith ";
+            p1.Name = "Александр";
+            p1.SecondName = "Перетягин";
             p1.dateOfBirth = new DateTime(2003, 08, 26);
 
             Exam[] exams = new Exam[5];
@@ -173,7 +193,7 @@ namespace laba2
             exams[3] = new Exam("База данных: ", 5 , new DateTime(2002, 6, 1));
             exams[4] = new Exam("Информационные технологии: ", 4 , new DateTime(2003, 6, 1));
 
-            Student student1 = new Student(Education.Bachelor, 11, p1);
+            Student student1 = new Student(Education.Бакалавриат, 11, p1);
 
             student1.AddExams(exams);
             Console.WriteLine(student1.ToShortString());
