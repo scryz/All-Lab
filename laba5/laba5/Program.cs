@@ -8,8 +8,6 @@ namespace laba5
         {
 
             string[] input1 = File.ReadAllLines(@"1.txt");
-            
-
             Regex regex1 = new Regex(@"(^a$)|(^a{6}$)|(^a{1} aa a$)");
             for (int i = 0; i < input1.Length; i++)
             {
@@ -22,7 +20,7 @@ namespace laba5
                     Console.WriteLine("1. Совпадений не найдено");
                 }
             }
-            
+
 
             string[] input2 = File.ReadAllLines(@"2.txt");
 
@@ -31,7 +29,7 @@ namespace laba5
             {
                 if (regex2.IsMatch(input2[i]))
                 {
-                    Console.WriteLine("2. Есть совпадение" + input2[i]);
+                    Console.WriteLine("2. Есть совпадение: " + input2[i]);
                 }
                 else
                 {
@@ -40,12 +38,12 @@ namespace laba5
             }
 
             string[] input3 = File.ReadAllLines(@"3.txt");
-            Regex regex3 = new Regex(@"^[a-zA-Z][-_].+[@].+[.].$");
+            Regex regex3 = new Regex(@"^(([aA-zZ]+[-_][aA-zZ0-9]+)|([aA-zZ0-9]+))[@]((\w+)|(\w[\w-]+))[.]\w+$");
             for (int i = 0; i < input3.Length; i++)
             {
                 if (regex3.IsMatch(input3[i]))
                 {
-                    Console.WriteLine("3. Есть совпадение" + input3[i]);
+                    Console.WriteLine("3. Есть совпадение: " + input3[i]);
                 }
                 else
                 {
@@ -54,7 +52,7 @@ namespace laba5
             }
 
             string[] input4a = File.ReadAllLines(@"4a.txt");
-            Regex regex4a = new Regex(@"^(ул\D\s)?(\S+)\s(д\D\s)?(\d{1,3}(/\d{1,3})?)$");
+            Regex regex4a = new Regex(@"^(?:[уУ][л][.]\s+)?([А-Яа-я]+(\-[А-Яа-я]+)?)?\s+(?:[дД][.]\s+)?(\d+(?:[/\-]\d+)?)$");
             for (int i = 0; i < input4a.Length; i++)
             {
                 if (regex4a.IsMatch(input4a[i]))
@@ -81,8 +79,21 @@ namespace laba5
 
             }
 
+            string[] dopz2 = File.ReadAllLines(@"dop2.txt");
+            Regex regexd2 = new Regex(@".((https://)|(http://)|(ftp://))?(www)[.]?([^\s][\w\-]+\.){1,4}\w+.");
+            for (int i = 0; i < dopz2.Length; i++)
+            {
+                if (regexd2.IsMatch(dopz2[i]))
+                {
+                    Console.WriteLine("dop 2. " + dopz2[i]);
+                    File.WriteAllText("ссылки.txt", dopz2[i]);
+                }
+
+            }
+
 
         }
     }
 }
+
 
