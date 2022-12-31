@@ -43,3 +43,18 @@ C:\Users\spere\Desktop\GitHub\все лабы, которые успел сде�
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\Lab2\Первое\obj\Debug\net6.0\Первое.pdb
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\Lab2\Первое\obj\Debug\net6.0\Первое.genruntimeconfig.cache
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\Lab2\Первое\obj\Debug\net6.0\ref\Первое.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\bin\Debug\net6.0\Первое.exe
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\bin\Debug\net6.0\Первое.deps.json
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\bin\Debug\net6.0\Первое.runtimeconfig.json
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\bin\Debug\net6.0\Первое.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\bin\Debug\net6.0\Первое.pdb
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.csproj.AssemblyReference.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.AssemblyInfoInputs.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.AssemblyInfo.cs
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\refint\Первое.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.pdb
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\Первое.genruntimeconfig.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\Lab2\Первое\obj\Debug\net6.0\ref\Первое.dll

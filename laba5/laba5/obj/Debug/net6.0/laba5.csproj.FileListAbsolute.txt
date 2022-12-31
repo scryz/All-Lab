@@ -13,3 +13,18 @@ C:\Users\spere\Desktop\GitHub\все лабы, которые успел сде�
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\laba5\laba5\obj\Debug\net6.0\laba5.pdb
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\laba5\laba5\obj\Debug\net6.0\laba5.genruntimeconfig.cache
 C:\Users\spere\Desktop\GitHub\все лабы, которые успел сделать\laba5\laba5\obj\Debug\net6.0\ref\laba5.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\bin\Debug\net6.0\laba5.exe
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\bin\Debug\net6.0\laba5.deps.json
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\bin\Debug\net6.0\laba5.runtimeconfig.json
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\bin\Debug\net6.0\laba5.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\bin\Debug\net6.0\laba5.pdb
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.csproj.AssemblyReference.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.AssemblyInfoInputs.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.AssemblyInfo.cs
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\refint\laba5.dll
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.pdb
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\laba5.genruntimeconfig.cache
+C:\Users\Оксана\Documents\GitHub\All-Lab\laba5\laba5\obj\Debug\net6.0\ref\laba5.dll

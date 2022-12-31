@@ -24,9 +24,9 @@ namespace laba2
 
             public Person()
             {
-                this.name = "";
-                this.SecondName = "";
-                this.dateOfBirth = new DateTime();
+                this.name = "Александр";
+                this.SecondName = "Петров";
+                this.dateOfBirth = new DateTime(1987, 09, 17);
             }
 
             public string Name
@@ -50,7 +50,7 @@ namespace laba2
             public int YearDateOfBirth
             {
                 get { return YearDateOfBirth; }
-                set { YearDateOfBirth = value; }
+                set { dateOfBirth = new DateTime(value); }
             }
 
             public string ToFullString()
@@ -88,6 +88,7 @@ namespace laba2
                 Rate = 5;
                 DateOfExam = new DateTime(2022, 10, 23);
             }
+
                 public string ToFullString()
             {
                 return "Дисциплина: " + Discipline + ", оценка: " + Rate + ", дата экзамена: " + DateOfExam;
@@ -100,6 +101,7 @@ namespace laba2
             public int group;
             public Person person;
             public Exam[] _passedExams;
+            public double Avgrate;
 
             public Student(Education education, int group, Person person)
             {

@@ -8,7 +8,7 @@ namespace laba5
         {
 
             string[] input1 = File.ReadAllLines(@"1.txt");
-            Regex regex1 = new Regex(@"(^a$)|(^a{6}$)|(^a{1} aa a$)");
+            Regex regex1 = new Regex(@"(^a$)|(^a{6}$)|(^a aa a$)");
             for (int i = 0; i < input1.Length; i++)
             {
                 if (regex1.IsMatch(input1[i]))
@@ -66,34 +66,39 @@ namespace laba5
                 }
             }
 
-            string dop1 = "Добро пожаловать в наш магазин, вот наши цены: 1 кг. яблоки - 90 руб., 2 кг. апельсины - 130 руб. Также в ассортименте орехи в следующей фасовке: 0.5 кг. миндаль - 500 руб";
-            Regex regex = new Regex(@"((?:\d+)?\.?\d+)?\sкг\.\s(\w+)\s\-\s(\d+)\sруб\.?");
-            var products = regex.Matches(dop1);
-            foreach (Match product in products)
-            {
-                foreach (Match Products in regex.Matches(product.Value))
+            
+
+
+
+
+
+                string dopz1 = "Добро пожаловать в наш магазин, вот наши цены: 1 кг. яблоки - 90 руб., 2 кг. апельсины - 130 руб. Также в ассортименте орехи в следующей фасовке: 0.5 кг. миндаль - 500 руб";
+                Regex regex = new Regex(@"((?:\d+)?[.]?\d+)?\sкг[.]\s(\w+)\s-\s(\d+)\sруб[.]?");
+                var products = regex.Matches(dopz1);
+                foreach (Match product in products)
                 {
-                    var SplitProduct = Products.Groups;
-                    Console.WriteLine($"{SplitProduct[2]} - {Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ','))} руб/кг");
+                    foreach (Match Products in regex.Matches(product.Value))
+                    {
+                        var SplitProduct = Products.Groups;
+                        Console.WriteLine($"{SplitProduct[2]} - {Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ','))} руб/кг");
+                    }
+
                 }
 
-            }
-
-            string[] dopz2 = File.ReadAllLines(@"dop2.txt");
-            Regex regexd2 = new Regex(@".((https://)|(http://)|(ftp://))?(www)[.]?([^\s][\w\-]+\.){1,4}\w+.");
-            for (int i = 0; i < dopz2.Length; i++)
-            {
-                if (regexd2.IsMatch(dopz2[i]))
+                var dopz2 = File.ReadAllText(@"dop2.txt");
+                Regex regexd2 = new Regex(@".((https://)|(http://)|(ftp://))?(www)[.]?([^-\s][\w-_]+[.]){1,4}\w+.");
+                var url = regexd2.Matches(dopz2);
+                string del = "";
+                foreach (Match urls in url)
                 {
-                    Console.WriteLine("dop 2. " + dopz2[i]);
-                    File.WriteAllText("ссылки.txt", dopz2[i]);
+                    del += $"{urls.Value.Trim()}:{urls.Index}\n";
                 }
-
-            }
-
-
+                File.WriteAllText("Ссылки.txt", del);
+                Console.WriteLine("4a. " + del);
+            
         }
     }
 }
+
 
 
