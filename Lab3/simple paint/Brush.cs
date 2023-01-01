@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -19,8 +20,7 @@ namespace simple_paint
         }
         public Color cColor { get; set; }
         public int Size { get; set; }
-        public Brush(Color cColor,
-                     int size)
+        public Brush(Color cColor, int size)
         {
             this.cColor = cColor;
             Size = size;
@@ -79,11 +79,7 @@ namespace simple_paint
 
                         }
                     }
-
-
-
                 }
-
             }
         }
     }
@@ -140,36 +136,43 @@ namespace simple_paint
             }
         }
     }
-    internal class CrocodileStramp : Brush
+
+    class SlashR : Brush
     {
-        public CrocodileStramp(Color cColor, int size) : base(cColor, size)
+        public SlashR(Color brushColor, int size) : base(brushColor, size)
         {
-
         }
-
         public override void Draw(Bitmap image, int x, int y)
         {
-            //r = 2*sin( 5*p)
-
-
-
-
-            for (int y0 = y - Size; y0 < y + Size; ++y0)
+            for (int y0 = -Size; y0 < Size; y0++)
             {
-                for (int x0 = x - Size; x0 < x + Size; ++x0)
+                for (int x0 = -Size; x0 < Size; x0++)
                 {
-                    if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+
+
+
+                    if (x0==y0)
                     {
-                        image.SetPixel(x0, y - x + x0, cColor);
+                        if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
+                        {
+
+                            image.SetPixel(x + x0, y + y0, cColor);
+                        }
+
                     }
 
+                    
+                        
+                    
                 }
             }
-
-
-
         }
     }
+
+
+
+
+
     internal class octoFlower : Brush
     {
         public octoFlower(Color cColor, int size) : base(cColor, size)
@@ -186,7 +189,7 @@ namespace simple_paint
             double beta = 0;
             int x0 = x;
             int y0 = y;
-            double t = 0.5;
+            double t = 0.05;
             int x1 = 0;
             int y1 = 0;
 
@@ -194,19 +197,21 @@ namespace simple_paint
             for (double n = 0; n < 2 * Math.PI; n += t)
             {
 
-                R = a * Math.Sin(3 * n);
+                R = a * Math.Sin(5 * n);
                 alpha = y + Math.Sin(n) * R;
                 beta = x + Math.Cos(n) * R;
                 y0 = (int)alpha;
                 x0 = (int)beta;
 
-
-                image.SetPixel(x0, y0, cColor);
-                if (n > 0 & n < 2 * Math.PI)
+                if (x0 > 0 & y0 > 0 & x0 < W & y0 < H)
                 {
-                    LineDrawer.DrawLine(image as Bitmap, x1, y1, x0, y0, cColor);
+                    image.SetPixel(x0, y0, cColor);
                 }
-                if (x0 != x1 && y0 != y1)
+                if (n > 0)
+                {
+                    Line.DrawLine(image as Bitmap, x1, y1, x0, y0, cColor);
+                }
+                if (x0 != x1 || y0 != y1)
                 {
                     x1 = x0;
                     y1 = y0;

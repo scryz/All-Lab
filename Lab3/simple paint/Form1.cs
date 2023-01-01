@@ -1,4 +1,5 @@
 using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace simple_paint
@@ -11,8 +12,8 @@ namespace simple_paint
         int _y;
         bool _mouseClicked = false;
 
+
         int ImW, ImH;
-        string MyBrush;
 
         Color SelectedColor
         {
@@ -20,9 +21,14 @@ namespace simple_paint
         }
 
 
-        int SelectedSize;
+        int SelectedSize
+        {
+            get { return trackBar1.Value; }
+        }
+
+        Brush _selectedBrush;
+
         
-        Brush _selectedBrush ;
 
         Color DefaultColor
         {
@@ -80,6 +86,7 @@ namespace simple_paint
             {
 
                 return;
+
             }
             _x = e.X > 0 ? e.X : 0;
             _y = e.Y > 0 ? e.Y : 0;
@@ -89,8 +96,6 @@ namespace simple_paint
 
 
         }
-
-
 
         private void pictureBox1_Mouseup(object sender, MouseEventArgs e)
         {
@@ -133,19 +138,16 @@ namespace simple_paint
             _selectedBrush = new Circle(SelectedColor, SelectedSize);
         }
 
-        private void ñîçäàòüToolStripMenuItem_Click(object sender, EventArgs e)
+        private void î÷èñòèòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
-            form.ShowDialog();
-            if (form.Canceled == false)
-            {
-                CreateBlank(form.W, form.H);
+
+            CreateBlank(ImW, ImH) ;
                 
-            }
+            
 
         }
 
-        private void pryamo_Click(object sender, EventArgs e)
+        private void lastic_Click(object sender, EventArgs e)
         {
             _selectedBrush = new Eraser(SelectedColor, SelectedSize);
         }
@@ -162,41 +164,40 @@ namespace simple_paint
         }
 
 
-
-        private void redBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void greenBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void blueBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ñîõðàíèòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
+            if (pictureBox1.Image != null)
             {
-                int width = Convert.ToInt32(pictureBox1.Width);
-                int height = Convert.ToInt32(pictureBox1.Height);
-                using (Bitmap bmp = new Bitmap(width, height))
+                
+                SaveFileDialog savedialog = new SaveFileDialog();
+                savedialog.OverwritePrompt = true;
+                savedialog.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF|Image Files(*.PNG)|*.PNG|All files (*.*)|*.*";
+                if (savedialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox1.DrawToBitmap(bmp, new Rectangle(0, 0, width, height));
-                    bmp.Save(dialog.FileName, ImageFormat.Jpeg);
+                    try
+                    {
+                        pictureBox1.Image.Save(savedialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Íåâîçìîæíî ñîõðàíèòü èçîáðàæåíèå", "Îøèáêà",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
         private void îòêðûòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == DialogResult.OK)
-                pictureBox1.Image = Image.FromFile(ofd.FileName);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "PNG|*.png";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                pictureBox1.ImageLocation = openFileDialog.FileName;
+
+            }
         }
 
         
@@ -220,9 +221,32 @@ namespace simple_paint
             _selectedBrush.Size = trackBar1.Value;
         }
 
+        private void toolsPanel_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
-        private void octoflower_Click_1(object sender, EventArgs e)
+        private void âûõîäToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ñïðàâêàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "Âåðñèÿ óïðîù¸ííîãî Paint:\nv.1.0.0",
+        "Ñïðàâêà",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1);
+        }
+
+        private void line_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new SlashR(SelectedColor, SelectedSize);
+        }
+
+        private void octoflower_Click(object sender, EventArgs e)
         {
            
             _selectedBrush = new octoFlower(SelectedColor, SelectedSize);
