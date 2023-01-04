@@ -14,7 +14,8 @@ namespace lab6
 {
     public partial class Form1 : Form
     {
-     
+        private object equations;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,9 +37,9 @@ namespace lab6
                 return Value;
             }
         }
-        void DrawFunction(double x1, double x2, Series series, Equation equation)
+        void DrawFunction(double x1, double x2, Equation equation, int N = 100)
         {
-            int N = 100;
+            
             chart1.Series.Add(SeriesCreator.Get(equation, x1, x2, N));
         }
 
@@ -61,20 +62,124 @@ namespace lab6
 
             if (textBox3.Text == "")
             {
-                MessageBox.Show("Вы не выбрали значение A");
+                MessageBox.Show("Вы не выбрали значение A!");
                 return;
             }
             if (textBox4.Text == "")
             {
-                MessageBox.Show("Вы не выбрали значение B");
+                MessageBox.Show("Вы не выбрали значение B!");
                 return;
             }
             if (textBox5.Text == "")
             {
-                MessageBox.Show("Вы не выбрали значение C");
+                MessageBox.Show("Вы не выбрали значение C!");
                 return;
             }
             equations = new QuadEquation(a: Convert.ToInt32(textBox3.Text), b: Convert.ToInt32(textBox4.Text), c: Convert.ToInt32(textBox5.Text));
+            
+
+
+
+        }
+
+        
+        
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Equation equations;
+
+            if (textBox6.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение a!"); 
+            }
+            else
+            {
+                equations = new SinEquation(a: Convert.ToInt32(textBox6.Text));
+            }
+        }
+
+        private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chart1.Series.Clear();
+            
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "Версия приложения:\nv.1.0.0",
+        "О приложении",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox3.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение A!");
+                return;
+            }
+            if (textBox4.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение B!");
+                return;
+            }
+            if (textBox5.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение C!");
+                return;
+            }
+            if (textBox8.Text == "")
+            {
+                MessageBox.Show("Введите левую границу рисования графика!");
+                return;
+            }
+            if (textBox8.Text == "")
+            {
+                MessageBox.Show("Введите правую границу рисования графика!");
+                return;
+            }
+
+
+
+
+            equations = new QuadEquation(a: Convert.ToInt32(textBox3.Text), b: Convert.ToInt32(textBox4.Text), c: Convert.ToInt32(textBox5.Text));
+            DrawFunction(x1: Convert.ToInt32(textBox8.Text), x2: Convert.ToInt32(textBox9.Text), (Equation)equations, N: Convert.ToInt32(textBox7.Text));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox6.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение a!");
+            }
+
+            equations = new SinEquation(a: Convert.ToInt32(textBox6.Text));
+            DrawFunction(x1: Convert.ToInt32(textBox8.Text), x2: Convert.ToInt32(textBox9.Text), (Equation)equations, N: Convert.ToInt32(textBox7.Text));
         }
     }
+    
 }
