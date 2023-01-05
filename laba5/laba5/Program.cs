@@ -80,7 +80,9 @@ namespace laba5
                     foreach (Match Products in regex.Matches(product.Value))
                     {
                         var SplitProduct = Products.Groups;
-                        Console.WriteLine($"{SplitProduct[2]} - {Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ','))} руб/кг");
+                        Console.WriteLine("dopz 1. " + SplitProduct[2] + " " + Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ','))  + " руб/кг");
+
+
                     }
 
                 }
@@ -94,7 +96,7 @@ namespace laba5
                     del += $"{urls.Value.Trim()}:{urls.Index}\n";
                 }
                 File.WriteAllText("Ссылки.txt", del);
-                Console.WriteLine("4a. " + del);
+                Console.WriteLine("dopz 2. " + del);
             
         }
     }
