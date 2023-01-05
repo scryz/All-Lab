@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,14 +82,20 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 28);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1001, 667);
+            this.chart1.Size = new System.Drawing.Size(1076, 722);
             this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chart1.Text = "Графики";
+            this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+            title1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.Name = "Title1";
+            title1.Text = "График уравнения";
+            this.chart1.Titles.Add(title1);
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // menuStrip1
@@ -95,7 +106,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1319, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1394, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,28 +153,30 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1001, 28);
+            this.panel1.Location = new System.Drawing.Point(1076, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 667);
+            this.panel1.Size = new System.Drawing.Size(318, 722);
             this.panel1.TabIndex = 2;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.textBox6);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 403);
+            this.panel5.Location = new System.Drawing.Point(0, 467);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(318, 171);
+            this.panel5.Size = new System.Drawing.Size(318, 239);
             this.panel5.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 101);
+            this.button1.Location = new System.Drawing.Point(0, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(318, 35);
             this.button1.TabIndex = 13;
@@ -174,7 +187,7 @@
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.Location = new System.Drawing.Point(0, 136);
+            this.button4.Location = new System.Drawing.Point(0, 169);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(318, 35);
             this.button4.TabIndex = 12;
@@ -213,10 +226,11 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.textBox9);
             this.panel4.Controls.Add(this.textBox7);
             this.panel4.Controls.Add(this.textBox8);
-            this.panel4.Controls.Add(this.button5);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
@@ -228,10 +242,11 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.button5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(318, 403);
+            this.panel4.Size = new System.Drawing.Size(318, 467);
             this.panel4.TabIndex = 5;
             // 
             // textBox9
@@ -258,7 +273,7 @@
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button5.Location = new System.Drawing.Point(0, 333);
+            this.button5.Location = new System.Drawing.Point(0, 432);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(318, 35);
             this.button5.TabIndex = 12;
@@ -269,7 +284,7 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Location = new System.Drawing.Point(0, 368);
+            this.button3.Location = new System.Drawing.Point(0, 397);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(318, 35);
             this.button3.TabIndex = 11;
@@ -380,11 +395,55 @@
             this.label13.Text = "Введите разбиение:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.Location = new System.Drawing.Point(0, 327);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(318, 35);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Решить методом прямоугольника";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button6.Location = new System.Drawing.Point(0, 362);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(318, 35);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Решить методом трапеции";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button7.Location = new System.Drawing.Point(0, 134);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(318, 35);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Решить методом трапеции";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button8.Location = new System.Drawing.Point(0, 99);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(318, 35);
+            this.button8.TabIndex = 16;
+            this.button8.Text = "Решить методом прямоугольника";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 695);
+            this.ClientSize = new System.Drawing.Size(1394, 750);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -437,6 +496,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }
 

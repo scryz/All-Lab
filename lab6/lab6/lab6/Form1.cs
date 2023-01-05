@@ -21,18 +21,18 @@ namespace lab6
             InitializeComponent();
         }
 
-        internal class SeriesCreator //Создаёт множество точек, которые формируют график
+        internal class SeriesCreator
         {
             static public Series Get(Equation equation, double x1, double x2, int quality = 100)
             {
-                double CurPoint;
+                double Points;
                 Series Value = new Series();
-                Value.ChartType = SeriesChartType.Line;
+                Value.ChartType = SeriesChartType.Spline;
                 double h = (x2 - x1) / quality;
                 for (int i = 0; i < quality; i++)
                 {
-                    CurPoint = x1 + i * h;
-                    Value.Points.AddXY(CurPoint, equation.GetValue(CurPoint));
+                    Points = x1 + i * h;
+                    Value.Points.AddXY(Points, equation.GetValue(Points));
                 }
                 return Value;
             }
@@ -77,13 +77,7 @@ namespace lab6
             }
             equations = new QuadEquation(a: Convert.ToInt32(textBox3.Text), b: Convert.ToInt32(textBox4.Text), c: Convert.ToInt32(textBox5.Text));
             
-
-
-
         }
-
-        
-        
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -152,7 +146,7 @@ namespace lab6
                 MessageBox.Show("Введите левую границу рисования графика!");
                 return;
             }
-            if (textBox8.Text == "")
+            if (textBox9.Text == "")
             {
                 MessageBox.Show("Введите правую границу рисования графика!");
                 return;
@@ -176,9 +170,119 @@ namespace lab6
             {
                 MessageBox.Show("Вы не выбрали значение a!");
             }
+            else
+            {
+                equations = new SinEquation(a: Convert.ToInt32(textBox6.Text));
+                DrawFunction(x1: Convert.ToInt32(textBox8.Text), x2: Convert.ToInt32(textBox9.Text), (Equation)equations, N: Convert.ToInt32(textBox7.Text));
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox3.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение A!");
+                return;
+            }
+            if (textBox4.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение B!");
+                return;
+            }
+            if (textBox5.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение C!");
+                return;
+            }
+            if (textBox8.Text == "")
+            {
+                MessageBox.Show("Введите левую границу рисования графика!");
+                return;
+            }
+            if (textBox9.Text == "")
+            {
+                MessageBox.Show("Введите правую границу рисования графика!");
+                return;
+            }
+            equations = new QuadEquation(a: Convert.ToInt32(textBox3.Text), b: Convert.ToInt32(textBox4.Text), c: Convert.ToInt32(textBox5.Text));
+            IntegratorRectangle rect = new IntegratorRectangle();
+            MessageBox.Show($"{rect.ToString()} {rect.Integrate((Equation)equations, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox9.Text), Convert.ToInt32(textBox7.Text))}");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox3.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение A!");
+                return;
+            }
+            if (textBox4.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение B!");
+                return;
+            }
+            if (textBox5.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение C!");
+                return;
+            }
+            if (textBox8.Text == "")
+            {
+                MessageBox.Show("Введите левую границу рисования графика!");
+                return;
+            }
+            if (textBox9.Text == "")
+            {
+                MessageBox.Show("Введите правую границу рисования графика!");
+                return;
+            }
+            equations = new QuadEquation(a: Convert.ToInt32(textBox3.Text), b: Convert.ToInt32(textBox4.Text), c: Convert.ToInt32(textBox5.Text));
+            IntegratorTrapezoid Trapz = new IntegratorTrapezoid();
+            MessageBox.Show($"{Trapz.ToString()} {Trapz.Integrate((Equation)equations, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox9.Text), Convert.ToInt32(textBox7.Text))}");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox6.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение a!");
+            }
 
             equations = new SinEquation(a: Convert.ToInt32(textBox6.Text));
-            DrawFunction(x1: Convert.ToInt32(textBox8.Text), x2: Convert.ToInt32(textBox9.Text), (Equation)equations, N: Convert.ToInt32(textBox7.Text));
+            IntegratorTrapezoid Trapz = new IntegratorTrapezoid();
+            MessageBox.Show($"{Trapz.ToString()} {Trapz.Integrate((Equation)equations, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox9.Text), Convert.ToInt32(textBox7.Text))}");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Введите разбиение!");
+                return;
+            }
+            if (textBox6.Text == "")
+            {
+                MessageBox.Show("Вы не выбрали значение a!");
+            }
+
+            equations = new SinEquation(a: Convert.ToInt32(textBox6.Text));
+            IntegratorRectangle rect = new IntegratorRectangle();
+            MessageBox.Show($"{rect.ToString()} {rect.Integrate((Equation)equations, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox9.Text), Convert.ToInt32(textBox7.Text))}");
         }
     }
     
