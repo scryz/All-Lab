@@ -1,4 +1,0 @@
-﻿[*.cs]
-
-# CS2001: Не удалось найти исходный файл "C:\Users\Оксана\Documents\GitHub\All-Lab\laba3\laba3\QuadBrush.cs".
-dotnet_diagnostic.CS2001.severity = warning
