@@ -51,28 +51,24 @@ namespace laba5
                 }
             }
 
-            string[] input4a = File.ReadAllLines(@"4a.txt");
-            Regex regex4a = new Regex(@"^(?:[уУ][л][.]\s+)?([А-Яа-я]+(\-[А-Яа-я]+)?)?\s+(?:[дД][.]\s+)?(\d+(?:[/\-]\d+)?)$");
-            for (int i = 0; i < input4a.Length; i++)
-            {
-                if (regex4a.IsMatch(input4a[i]))
 
-                {
-                    Console.WriteLine("4a. " + input4a[i]);
-                }
-                else
-                {
-                    Console.WriteLine("4a. Совпадений не найдено");
-                }
-            }
 
+            /*5a. Найти: (([^0-9]+[.])(?:[уУ][л][.]\s+)?([А-Яа-я]+(\-[А-Яа-я]+)?)?\s+(?:[дД][.]\s+)?(\d+(?:[/\-]\d+)?))
             
+              5b. Найти: (^[\d]+[.])
+                  Заменить: (пусто)
+
+              5c. Найти: (\s{1,}<((/)?[a-z0-9]+)>)
+                  Заменить:   (<\2>)
+
+              5d. Найти: (((\s+)?)<([^<]+)>([^<]+)<([^<]+)>)
+                  Заменить: (\2<\4>\5</\4>)
+            */
 
 
 
 
-
-                string dopz1 = "Добро пожаловать в наш магазин, вот наши цены: 1 кг. яблоки - 90 руб., 2 кг. апельсины - 130 руб. Также в ассортименте орехи в следующей фасовке: 0.5 кг. миндаль - 500 руб";
+            string dopz1 = "Добро пожаловать в наш магазин, вот наши цены: 1 кг. яблоки - 90 руб., 2 кг. апельсины - 130 руб. Также в ассортименте орехи в следующей фасовке: 0.5 кг. миндаль - 500 руб";
                 Regex regex = new Regex(@"((?:\d+)?[.]?\d+)?\sкг[.]\s(\w+)\s-\s(\d+)\sруб[.]?");
                 var products = regex.Matches(dopz1);
                 foreach (Match product in products)
@@ -80,7 +76,7 @@ namespace laba5
                     foreach (Match Products in regex.Matches(product.Value))
                     {
                         var SplitProduct = Products.Groups;
-                        Console.WriteLine("dopz 1. " + SplitProduct[2] + " " + Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ','))  + " руб/кг");
+                        Console.WriteLine("dopz 1. " + SplitProduct[2] + " " + Convert.ToDouble(SplitProduct[3].Value) / Convert.ToDouble(SplitProduct[1].Value.Replace('.', ',')) + " руб/кг");
 
 
                     }
@@ -97,10 +93,11 @@ namespace laba5
                 }
                 File.WriteAllText("Ссылки.txt", del);
                 Console.WriteLine("dopz 2. " + del);
-            
+
+            }
         }
     }
-}
+
 
 
 
