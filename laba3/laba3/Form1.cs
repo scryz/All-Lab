@@ -66,21 +66,6 @@ namespace laba3
         }
 
 
-
-
-
-
-
-
-                                            private void button2_Click(object sender, EventArgs e)
-                                            {
-                                                _selecredBrush = new Rectangle(SelectedColor, SelectedSize);
-                                            }
-
- 
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;

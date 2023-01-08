@@ -108,26 +108,7 @@ namespace laba3
             }
         }
     }
-    class Rectangle : Brush
-    {
-        public Rectangle(Color brushColor, int size) : base(brushColor, size)
-        {
-        }
-        public override void Draw(Bitmap image, int x, int y)
-        {
-            for (int y0 = y - Size; y0 < y + Size; y0++)
-            {
-                for (int x0 = x - Size; x0 < x + Size + 10; x0++)
-                {
-                    if (x0 > 0 & y0 > 0)
-                    {
-                        image.SetPixel(x0, y0, BrushColor);
-                    }
 
-                }
-            }
-        }
-    }
     class Spray : Brush
     {
         public Spray(Color brushColor, int size) : base(brushColor, size)
