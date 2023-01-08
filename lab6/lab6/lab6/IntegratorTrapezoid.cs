@@ -29,8 +29,8 @@ namespace lab6
             for (int i = 1; i < N; i++)
             {
 
-                var res = equation.GetValue(x1 + i * h);
-                sum += (Double.IsNaN(res) ? 0 : res);
+                var r = equation.GetValue(x1 + i * h);
+                sum += (Double.IsNaN(r) ? 0 : r);
             }
             return h * (sum + sumf);
 
