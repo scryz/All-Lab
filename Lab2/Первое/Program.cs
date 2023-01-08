@@ -186,7 +186,7 @@ namespace laba2
             Person p1 = new Person();
             p1.Name = "Александр";
             p1.SecondName = "Перетягин";
-            p1.dateOfBirth = new DateTime(2003, 08, 26);
+            p1.DateOfBirth = new DateTime(2003, 08, 26);
 
             Exam[] exams = new Exam[5];
             exams[0] = new Exam("Вышмат: ", 4 , new DateTime(2008, 6, 1));
