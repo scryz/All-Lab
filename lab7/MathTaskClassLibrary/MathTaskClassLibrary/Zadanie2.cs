@@ -8,8 +8,11 @@ namespace MathTaskClassLibrary
 {
     public class Zadanie2
     {
-        public double[] zadanie2(double a, double b, double c, double x1, double x2, double D)
+        public double[] zadanie2(double a, double b, double c)
         {
+            double x1;
+            double x2;
+            double D;
             if (a == 0)
             {
                 throw new ArgumentException();

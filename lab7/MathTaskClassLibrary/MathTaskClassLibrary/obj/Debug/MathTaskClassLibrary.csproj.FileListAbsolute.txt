@@ -4,3 +4,9 @@ C:\Users\Оксана\Documents\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTas
 C:\Users\Оксана\Documents\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Оксана\Documents\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.dll
 C:\Users\Оксана\Documents\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.pdb
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\bin\Debug\MathTaskClassLibrary.dll
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\bin\Debug\MathTaskClassLibrary.pdb
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.csproj.AssemblyReference.cache
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.dll
+C:\Users\spere\Desktop\GitHub\All-Lab\lab7\MathTaskClassLibrary\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.pdb

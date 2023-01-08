@@ -1,33 +1,23 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using MathTaskClassLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using MathTaskClassLibrary;
 
 namespace MathTaskClassLibraryTests
 {
     [TestClass]
-    public class GeometryTests
+    public class Zadanie1Test
     {
         [TestMethod]
-        public void CalculateAreaTest()
+        public void zadanie1Test()
         {
-            bool catched = false;
-            try
-            {
-                int a = -4;
-                int b = 10;
-                
 
+            int n = 2;
+            string expected = "AB";
 
-                Geometry g = new Geometry();
-                g.CalculateArea(a, b);
-            }
-            catch (ArgumentException e)
-            {
-                catched = true;
-            }
+            Zadanie1 zadanie1 = new Zadanie1();
+            string actual = zadanie1.zadanie1(n);
 
-            
-            Assert.IsTrue(catched, "не обработаны допустимые данные");
+            Assert.AreEqual(expected, actual);
         }
     }
 }
