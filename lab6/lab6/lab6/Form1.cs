@@ -23,24 +23,23 @@ namespace lab6
 
         internal class SeriesCreator
         {
-            static public Series Get(Equation equation, double x1, double x2, int quality = 100)
+            static public void Get(Series series, Equation equation, double x1, double x2, int quality = 100)
             {
                 double Points;
-                Series Value = new Series();
-                Value.ChartType = SeriesChartType.Spline;
+                series.ChartType = SeriesChartType.Line;
                 double h = (x2 - x1) / quality;
                 for (int i = 0; i < quality; i++)
                 {
                     Points = x1 + i * h;
-                    Value.Points.AddXY(Points, equation.GetValue(Points));
+                    series.Points.AddXY(Points, equation.GetValue(Points));
                 }
-                return Value;
+                
             }
         }
         void DrawFunction(double x1, double x2, Equation equation, int N = 100)
         {
-            
-            chart1.Series.Add(SeriesCreator.Get(equation, x1, x2, N));
+
+            SeriesCreator.Get(chart1.Series[0], equation, x1, x2, N);
         }
 
 
@@ -105,7 +104,7 @@ namespace lab6
 
         private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            chart1.Series.Clear();
+            chart1.Series[0].Points.Clear();
             
         }
 
